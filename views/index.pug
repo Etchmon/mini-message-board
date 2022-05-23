@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  each message in messages
+    div
+      h1 #{message.user} : #{message.text} - #{message.added}
+  else
+    h1 There are no messages
+  button
+    a(href="/new") New Messages
